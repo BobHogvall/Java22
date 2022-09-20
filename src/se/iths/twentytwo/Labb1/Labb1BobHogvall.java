@@ -113,10 +113,10 @@ public class Labb1BobHogvall {
         int sumOfFourPrices, averageOfFour = 0, lowestSumOfFourPrices = Integer.MAX_VALUE, bestTime = 0;
         for (int i = 0; i < timeAndPriceInput.length - 3; i++) {
             sumOfFourPrices = timeAndPriceInput[i] + timeAndPriceInput[i + 1] + timeAndPriceInput[i + 2] + timeAndPriceInput[i + 3];
-            if (sumOfFourPrices < lowestSumOfFourPrices)
+            if (sumOfFourPrices < lowestSumOfFourPrices){
                 lowestSumOfFourPrices = sumOfFourPrices;
             averageOfFour = lowestSumOfFourPrices / 4;
-            bestTime = i;
+            bestTime = i;}
         }
         System.out.println("\nMedelpriset av de fyra billigaste sammanhängande timmarna är: " + averageOfFour + " öre/kWh klockan " + bestTime + "-"+ (bestTime+4));
 
