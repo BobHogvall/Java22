@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 class Product implements Comparable<Product>{
-    private String productName;//fixa felmeddelande på alla
+    private String productName;
     private String category;
     private BigDecimal fullPrice;
-    private String brand; // fixa så att det går att skriva hel sträng/mer än ett ord
+    private String brand; 
     private int eanId;
 
     public Product (String productName, String category, BigDecimal fullPrice, String brand, int eanId){
