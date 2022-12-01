@@ -47,7 +47,7 @@ class Product implements Comparable<Product>{
     }
     public void setFullPrice(BigDecimal fullPrice) {
         this.fullPrice = fullPrice;
-        //try catch, att de kan använda både punkt och komma
+        
     }
 
 
@@ -75,8 +75,6 @@ class Product implements Comparable<Product>{
     }
 
 
-
-// vilken av formerna vill jag ha? Samt lista ut vad de betyder/gör...
 
 
     @Override
