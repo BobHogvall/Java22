@@ -121,10 +121,12 @@ class ActionMethods {
                         ", "+product.get(i).getFullPrice()+", "+product.get(i).getBrand()+", "+product.get(i).getEanId()+".");
         }
     }
+    
     public static void searchAndPrintCategory(Scanner scan, List<Product> product) {
         System.out.println("Vilken kategori söker du?");
+        var searchFor = scan.next().toLowerCase();
         var searchedCategory = product.stream()
-                .filter(category -> Objects.equals(category.getCategory(), scan.next().toLowerCase()))
+                .filter(category -> Objects.equals(category.getCategory(), searchFor))
                 .toList();
         printProductList(searchedCategory);
 
@@ -132,8 +134,9 @@ class ActionMethods {
 
     public static void searchAndPrintBrands(Scanner scan, List<Product> product) {
         System.out.println("Vilket varumärke söker du?");
+        var searchFor = scan.next().toLowerCase();
         var searchedBrand = product.stream()
-                .filter(brand -> Objects.equals(brand.getBrand(), scan.next().toLowerCase()))
+                .filter(brand -> Objects.equals(brand.getBrand(), searchFor))
                 .toList();
         printProductList(searchedBrand);
     }
