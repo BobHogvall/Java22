@@ -56,7 +56,7 @@ public class MainProgram {
         product.add(new Product(scan.next().toLowerCase(), scan.next().toLowerCase(), scan.nextBigDecimal(),
                 scan.next().toLowerCase(), scan.nextInt()));
     }
-    private static void removeProduct(Scanner scan, List<Product> product) { //just nu sorteras produkterna efter namn
+    private static void removeProduct(Scanner scan, List<Product> product) {
         System.out.println("Vilken vara vill du ta bort?");
         removingMethod(scan, product);
     }
@@ -128,7 +128,7 @@ public class MainProgram {
 
     }
 
-    private static void searchInCategories(Scanner scan, List<Product> product) { // vill jag printa listan?
+    private static void searchInCategories(Scanner scan, List<Product> product) { 
         sortAndPrintCategoryList(product);
         searchAndPrintCategory(scan, product);
 
